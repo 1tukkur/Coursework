@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Tukkur VanVark" content="Vanv0123_Calendar.html">
+<title>Vanv0123_Calendar.html</title>
+
+<link rel="stylesheet" type="text/css" href="vanv0123style.css">
+<script type="text/javascript" src="vanv0123Calendar.js"></script>
+
+</head>
+<body>
+
+<div id="PageTitle">My Fall Schedule 2016</div>
+
+<nav id="Nav">
+	<p><button onclick="window.location.href = 'vanv0123Calendar.html'">Calendar</button></p>
+	<p><button onclick="window.location.href = 'vanv0123Form.html'">Form Input</button></p>
+</nav>
+
+<div>
+	<p id="DayEvents">
+		
+	</p>
+</div>
+
+
+<table>
+	<tr>
+		<td style="background-color:#ADFF2F"><span onclick="getMonday()">Monday</span></td>
+		<td>
+			<p>Comm 3401</p>
+			<p><a href="https://campusmaps.umn.edu/nicholson-hall">Nicholson Hall 155</a></p>
+			<p class="times">9:45-11:00</p>
+		</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>
+			<p>MUS 3480</p>
+			<p><a href="http://campusmaps.umn.edu/tcf-bank-stadium">TCF Bank Stadium</a></p>
+			<p class="times">4:15-6:00</p>
+		</td>
+		<td>-</td>
+	</tr>
+	<tr>
+		<td style="background-color:#ADFF2F"><span onclick="getTuesday()">Tuesday</span></td>
+		<td>-</td>
+		<td>
+			<p>WRIT 3221W</p>
+			<p><a href="https://campusmaps.umn.edu/nolte-center-continuing-education">Nolte Center 229</a></p>
+			<p class="times">11:15-12:30</p>
+		</td>
+		<td>
+			<p>CSCI 4707</p>
+			<p><a href="http://campusmaps.umn.edu/fraser-hall">Fraser Hall 101</a></p>
+			<p class="times">1:00-2:15</p>
+		</td>
+		<td>
+			<p>CSCI 4131</p>
+			<p><a href="https://campusmaps.umn.edu/robert-h-bruininks-hall">Bruininks Hall 230</a></p>
+			<p class="times">2:30-3:45</p>
+		</td>
+		<td>
+			<p>MUS 3480</p>
+			<p><a href="http://campusmaps.umn.edu/tcf-bank-stadium">TCF Bank Stadium</a></p>
+			<p class="times">4:15-6:00</p>
+		</td>
+		<td>-</td>
+	</tr>
+	<tr>
+		<td style="background-color:#ADFF2F"><span onclick="getWednesday()">Wednesday</span></td>
+		<td>
+			<p>Comm 3401</p>
+			<p><a href="https://campusmaps.umn.edu/nicholson-hall">Nicholson Hall 155</a></p>
+			<p class="times">9:45-11:00</p>
+		</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>
+			<p>MUS 3480</p>
+			<p><a href="http://campusmaps.umn.edu/tcf-bank-stadium">TCF Bank Stadium</a></p>
+			<p class="times">4:15-6:00</p>
+		</td>
+		<td>
+			<p>MUS 3480</p>
+			<p><a href="http://campusmaps.umn.edu/tcf-bank-stadium">TCF Bank Stadium</a></p>
+			<p class="times">7:00-10:00</p>
+		</td>
+	</tr>
+	<tr>
+		<td style="background-color:#ADFF2F"><span onclick="getThursday()">Thursday</span></td>
+		<td>-</td>
+		<td>
+			<p>WRIT 3221W</p>
+			<p><a href="https://campusmaps.umn.edu/nolte-center-continuing-education">Nolte Center 229</a></p>
+			<p class="times">11:15-12:30</p>
+		</td>
+		<td>
+			<p>CSCI 4707</p>
+			<p><a href="http://campusmaps.umn.edu/fraser-hall">Fraser Hall 101</a></p>
+			<p class="times">1:00-2:15</p>
+		</td>
+		<td>
+			<p>CSCI 4131</p>
+			<p><a href="https://campusmaps.umn.edu/robert-h-bruininks-hall">Bruininks Hall 230</a></p>
+			<p class="times">2:30-3:45</p>
+		</td>
+		<td>
+			<p>MUS 3480</p>
+			<p><a href="http://campusmaps.umn.edu/tcf-bank-stadium">TCF Bank Stadium</a></p>
+			<p class="times">4:15-6:00</p>
+		</td>
+		<td>-</td>
+	</tr>
+	<tr>
+		<td style="background-color:#ADFF2F"><span onclick="getFriday()">Friday</span></td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>-</td>
+		<td>
+			<p>MUS 3480</p>
+			<p><a href="http://campusmaps.umn.edu/tcf-bank-stadium">TCF Bank Stadium</a></p>
+			<p class="times">6:30-8:30</p>
+		</td>
+	</tr>
+</table>
+
+<div id="footer"><i>This page has been tested on Chrome, Firefox, and Safari</i></div>
+
+<div id="imageRow">
+
+</div>
+
+</body>
+</html>

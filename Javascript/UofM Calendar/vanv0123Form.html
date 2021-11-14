@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Tukkur VanVark" content="Vanv0123_Calendar.html">
+<title>Vanv0123_Calendar.html</title>
+
+<link rel="stylesheet" type="text/css" href="vanv0123style.css">
+
+
+<script type="text/javascript">
+	var currentIndex = 0;
+	var images = ["Images/Nerve.jpg", "Images/secret-life-of-pets.jpg", "Images/suicide-squad.jpg"];
+	var urls = ["http://sua.umn.edu/events/calendar/event/14781/", "http://sua.umn.edu/events/calendar/event/14786/", 
+				"http://sua.umn.edu/events/calendar/event/14794/"];
+	var timeouts = [7000, 5000, 3000];
+	var tooltips = [["Nerve", "Fri, Sep 30 7:00PM"],
+					["The Secret Life of Pets", "Fri, Oct 7 7:00PM"],
+					["Suicide Squad", "Fri, Oct 14 8:00PM"]];
+	var el = function(id){
+		return document.getElementById(id);
+	}
+	var getNext = function(){
+		if(currentIndex == 2){
+			currentIndex = 0;
+			//switch html to next image
+			gotoImage(currentIndex);
+		}else{
+			currentIndex++;
+			//switch html to next image
+			gotoImage(currentIndex);
+		}
+	};
+
+	var getPrev = function(){
+		if(currentIndex==0){
+			currentIndex=2;
+			//switch html to prev image
+			gotoImage(currentIndex);
+		}else{
+			currentIndex--;
+			//switch html to prev image
+			gotoImage(currentIndex);
+		}
+	};
+
+	var gotoImage = function(i){
+		if(i>=0 && i<=2){
+			currentIndex = i;
+			el('banner').src = images[i];
+			el('bannerLink').href = urls[currentIndex];
+			getTooltipText(currentIndex);
+
+		}
+		if(i==0){
+			el('dot1').className = 'dotActive';
+			el('dot2').className = 'dotResting';
+			el('dot3').className = 'dotResting';
+		}
+		else if(i==1){
+			el('dot2').className = 'dotActive';
+			el('dot1').className = 'dotResting';
+			el('dot3').className = 'dotResting';
+
+		}
+		else if(i==2){
+			el('dot3').className = 'dotActive';
+			el('dot2').className = 'dotResting';
+			el('dot1').className = 'dotResting';
+
+		}
+	}
+
+	var playSlides = setInterval(getNext, timeouts[currentIndex]);
+
+	var showTooltip = function(){
+		el('tooltip').style.visibility = 'visible';
+	}
+
+	var hideTooltip = function(){
+		el('tooltip').style.visibility = 'hidden';
+	}
+
+	var getTooltipText = function(id){
+		el('tooltipName').innerHTML = tooltips[id][0];
+		el('tooltipTime').innerHTML - tooltips[id][1];
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+<div class="slideshow-container">
+
+	<button onclick="getPrev()" id="prevButton"></button>
+
+
+	<a href="http://sua.umn.edu/events/calendar/event/14781/" id="bannerLink">
+		<img src="Images/Nerve.jpg" id="banner" alt="b" onmouseenter="showTooltip()" onmouseleave="hideTooltip()">
+	</a>
+
+
+	<button onclick="getNext()" id="nextButton"></button>
+
+
+	<div class="dots">
+		<button onclick="gotoImage(0)" id="dot1" class="dotActive"></button>
+
+		<button onclick="gotoImage(1)" id="dot2" class="dotResting"></button>
+
+		<button onclick="gotoImage(2)" id="dot3" class="dotResting"></button>
+	</div>
+
+</div>
+
+<div id="tooltip">
+		<p id="tooltipName">Nerve</p>
+		<p id="tooltipTime">Fri, Sep 30 7:00PM</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+	<p id="PageTitle">My Fall Schedule 2016</p>
+
+	<nav id="Nav">
+		<p><button onclick="window.location.href = 'vanv0123Calendar.html'">Calendar</button></p>
+	    <p><button onclick="window.location.href = 'vanv0123Form.html'">Form Input</button></p>
+	</nav>
+
+	<form method="get" action="http://www-users.cselabs.umn.edu/~sharm398/index.php">
+		<div>Event Name <input type="Text" name="eventname"></div>
+		<br>
+		<div>Start Time <input type="Time" name="starttime"></div>
+		<br>
+		<div>End Time <input type="Time" name="endtime"></div>
+		<br>
+		<div>Location <input type="Text" name="location"></div>
+		<br>
+
+		<div>Day 
+			<select name="day">
+				<option value="Monday">Mon</option>
+				<option value="Tuesday">Tue</option>
+				<option value="Wednesday">Wed</option>
+				<option value="Thursday">Thur</option>
+				<option value="Friday">Fri</option>
+				<option value="Saturday">Sat</option>
+				<option value="Sunday">Sun</option>
+			</select>
+		</div>
+		<br>
+		<input type="submit">
+	</form>
+
+
+
+
+<p id="footer"><i>This page has been tested on Chrome, Firefox, and Safari</i></p>
+
+
+</body>
+</html>

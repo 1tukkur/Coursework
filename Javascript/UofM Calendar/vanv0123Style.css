@@ -1,0 +1,146 @@
+/* Calendar Styles */	
+
+	html{
+		background-color: #E0E0E0;
+	}
+
+	#PageTitle{
+		text-align: center;
+		font-size: 25px;
+		font-weight: bolder;
+
+	}
+	#Nav{
+		width:90%;
+		background-color: #ADFF2F;
+		text-align: center;
+		margin:0px auto;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+	#Nav p{
+		display:inline-block;
+		width:200px;
+	}
+	#DayEvents {
+		text-align:center;
+	}
+	table{
+		text-align: center;
+		border-collapse: collapse;
+		margin: 0px auto;
+	}
+	table span{
+		font-weight: bolder;
+	}
+	td{
+		border: 1px solid black;
+		height:100px;
+		width:150px;
+		background:#00ffff;
+	}
+	.times{
+		font-style: italic;
+	}
+	#footer{
+		text-align: center;
+	}
+
+	#imageRow{
+		text-align:center;
+	}
+
+
+/* Form Styles */
+
+form{
+	border: 1px solid black;
+	width:275px;
+	text-align: center;
+	margin:0px auto;
+	padding:5px 5px 5px 5px;
+	background:#00ffff;
+}
+
+form div{
+	height:10px;
+}
+
+form input{
+	margin-left:5px;
+}
+
+
+/*Slideshow Class*/
+
+.slideshow-container{
+	text-align: center;
+	z-index: 0;
+}
+
+#prevButton{
+	width:32px;
+	height:32px;
+	border:none;
+	border-radius: 50%;
+	background-image: url("Images/prev_blue.png");
+}
+
+#prevButton:active{
+	background-image: url("Images/prev_orange.png");
+}
+
+#nextButton{
+	width:32px;
+	height:32px;
+	border:none;
+	border-radius: 50%;
+	background-image: url("Images/next_blue.png");
+}
+
+#nextButton:active{
+	background-image: url("Images/next_orange.png");
+}
+
+.dotActive{
+	width:16px;
+	height:16px;
+	border: none;
+	border-radius: 50%;
+	background-image: url("Images/bullet_blue.png");
+}
+
+.dotResting{
+	width:16px;
+	height:16px;
+	border: none;
+	border-radius: 50%;
+	background-image: url("Images/bullet_gray.png");
+}
+
+.dotResting:hover{
+	background-image:url("Images/bullet_orange.png");
+}
+
+#tooltip{
+	border:1px solid black;
+	position:absolute;
+	left:210px;
+	top:250px;
+	background-color:#99FFFF;
+	z-index: 1;
+	padding:2px 2px 2px 2px;
+	visibility: hidden;
+
+}
+
+#tooltip p{
+	line-height:3px;
+}
+
+
+
+
+
+
+
